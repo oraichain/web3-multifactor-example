@@ -107,10 +107,7 @@ export const tKey = new ThresholdKey({
 - Install yarn
 - Default of example is using only-social-key. If you want to change to thresholdKey, you must comment only-social-key-test and uncommnet the test in [index.ts](src/index.tsx)
 
-```typescript
-// import App from "./Test";
-import App from "./Only-Social-Key-Test";
-```
+https://github.com/oraichain/web3-multifactor-example/blob/master/src/index.tsx#L4-#L5
 
 - 2 enviroments are provided in example:
 
