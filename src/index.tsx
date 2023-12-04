@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./okey";
 // import App from "./Test";
 import App from "./Only-Social-Key-Test";
 import { theme } from "./theme";
@@ -10,12 +11,14 @@ import { ThemeProvider } from "@emotion/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement,
+);
 root.render(
   <ThemeProvider theme={theme}>
     <App />
     <ToastContainer />
-  </ThemeProvider>
+  </ThemeProvider>,
 );
 
 // If you want your app to work offline and load faster, you can change

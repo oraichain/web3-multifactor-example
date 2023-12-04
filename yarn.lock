@@ -87,7 +87,7 @@
     "@jridgewell/trace-mapping" "^0.3.17"
     jsesc "^2.5.1"
 
-"@babel/helper-annotate-as-pure@^7.22.5":
+"@babel/helper-annotate-as-pure@^7.18.6", "@babel/helper-annotate-as-pure@^7.22.5":
   version "7.22.5"
   resolved "https://registry.npmjs.org/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.22.5.tgz"
   integrity sha512-LvBTxu8bQSQkcyKOU+a1btnNFQ1dMAd0R6PyW3arXes06F6QLWLIrd681bxRPIXlrMGR3XYnW9JyML7dP3qgxg==
@@ -127,6 +127,21 @@
     "@babel/helper-split-export-declaration" "^7.22.6"
     semver "^6.3.1"
 
+"@babel/helper-create-class-features-plugin@^7.21.0":
+  version "7.23.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.23.5.tgz#2a8792357008ae9ce8c0f2b78b9f646ac96b314b"
+  integrity sha512-QELlRWxSpgdwdJzSJn4WAhKC+hvw/AtHbbrIoncKHkhKKR/luAlKkgBDcri1EzWAo8f8VvYVryEHN4tax/V67A==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.22.5"
+    "@babel/helper-environment-visitor" "^7.22.20"
+    "@babel/helper-function-name" "^7.23.0"
+    "@babel/helper-member-expression-to-functions" "^7.23.0"
+    "@babel/helper-optimise-call-expression" "^7.22.5"
+    "@babel/helper-replace-supers" "^7.22.20"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.22.5"
+    "@babel/helper-split-export-declaration" "^7.22.6"
+    semver "^6.3.1"
+
 "@babel/helper-create-regexp-features-plugin@^7.18.6", "@babel/helper-create-regexp-features-plugin@^7.22.5":
   version "7.22.15"
   resolved "https://registry.npmjs.org/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.22.15.tgz"
@@ -147,6 +162,11 @@
     lodash.debounce "^4.0.8"
     resolve "^1.14.2"
 
+"@babel/helper-environment-visitor@^7.22.20":
+  version "7.22.20"
+  resolved "https://registry.yarnpkg.com/@babel/helper-environment-visitor/-/helper-environment-visitor-7.22.20.tgz#96159db61d34a29dba454c959f5ae4a649ba9167"
+  integrity sha512-zfedSIzFhat/gFhWfHtgWvlec0nqB9YEIVrpuwjruLlXfUSnA8cJB0miHKwqDnQ7d32aKo2xt88/xZptwxbfhA==
+
 "@babel/helper-environment-visitor@^7.22.5":
   version "7.22.5"
   resolved "https://registry.npmjs.org/@babel/helper-environment-visitor/-/helper-environment-visitor-7.22.5.tgz"
@@ -159,6 +179,14 @@
   dependencies:
     "@babel/template" "^7.22.5"
     "@babel/types" "^7.22.5"
+
+"@babel/helper-function-name@^7.23.0":
+  version "7.23.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.23.0.tgz#1f9a3cdbd5b2698a670c30d2735f9af95ed52759"
+  integrity sha512-OErEqsrxjZTJciZ4Oo+eoZqeW9UIiOcuYKRJA4ZAgV9myA+pOXhhmpfNCKjEH/auVfEYVFJ6y1Tc4r0eIApqiw==
+  dependencies:
+    "@babel/template" "^7.22.15"
+    "@babel/types" "^7.23.0"
 
 "@babel/helper-hoist-variables@^7.22.5":
   version "7.22.5"
@@ -173,6 +201,13 @@
   integrity sha512-qLNsZbgrNh0fDQBCPocSL8guki1hcPvltGDv/NxvUoABwFq7GkKSu1nRXeJkVZc+wJvne2E0RKQz+2SQrz6eAA==
   dependencies:
     "@babel/types" "^7.22.15"
+
+"@babel/helper-member-expression-to-functions@^7.23.0":
+  version "7.23.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.23.0.tgz#9263e88cc5e41d39ec18c9a3e0eced59a3e7d366"
+  integrity sha512-6gfrPwh7OuT6gZyJZvd6WbTfrqAo7vm4xCzAXOusKqq/vWdKXphTpj5klHKNmRUU6/QRGlBsyU9mAIPaWHlqJA==
+  dependencies:
+    "@babel/types" "^7.23.0"
 
 "@babel/helper-module-imports@^7.10.4", "@babel/helper-module-imports@^7.16.7", "@babel/helper-module-imports@^7.22.15", "@babel/helper-module-imports@^7.22.5":
   version "7.22.15"
@@ -213,6 +248,15 @@
     "@babel/helper-environment-visitor" "^7.22.5"
     "@babel/helper-wrap-function" "^7.22.9"
 
+"@babel/helper-replace-supers@^7.22.20":
+  version "7.22.20"
+  resolved "https://registry.yarnpkg.com/@babel/helper-replace-supers/-/helper-replace-supers-7.22.20.tgz#e37d367123ca98fe455a9887734ed2e16eb7a793"
+  integrity sha512-qsW0In3dbwQUbK8kejJ4R7IHVGwHJlV6lpG6UA7a9hSa2YEiAib+N1T2kr6PEeUT+Fl7najmSOS6SmAwCHK6Tw==
+  dependencies:
+    "@babel/helper-environment-visitor" "^7.22.20"
+    "@babel/helper-member-expression-to-functions" "^7.22.15"
+    "@babel/helper-optimise-call-expression" "^7.22.5"
+
 "@babel/helper-replace-supers@^7.22.5", "@babel/helper-replace-supers@^7.22.9":
   version "7.22.9"
   resolved "https://registry.npmjs.org/@babel/helper-replace-supers/-/helper-replace-supers-7.22.9.tgz"
@@ -248,10 +292,20 @@
   resolved "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.22.5.tgz"
   integrity sha512-mM4COjgZox8U+JcXQwPijIZLElkgEpO5rsERVDJTc2qfCDfERyob6k5WegS14SX18IIjv+XD+GrqNumY5JRCDw==
 
+"@babel/helper-string-parser@^7.23.4":
+  version "7.23.4"
+  resolved "https://registry.yarnpkg.com/@babel/helper-string-parser/-/helper-string-parser-7.23.4.tgz#9478c707febcbbe1ddb38a3d91a2e054ae622d83"
+  integrity sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==
+
 "@babel/helper-validator-identifier@^7.22.15", "@babel/helper-validator-identifier@^7.22.5":
   version "7.22.15"
   resolved "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.15.tgz"
   integrity sha512-4E/F9IIEi8WR94324mbDUMo074YTheJmd7eZF5vITTeYchqAi6sYXRLHUVsmkdmY4QjfKTcB2jB7dVP3NaBElQ==
+
+"@babel/helper-validator-identifier@^7.22.20":
+  version "7.22.20"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.20.tgz#c4ae002c61d2879e724581d96665583dbc1dc0e0"
+  integrity sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==
 
 "@babel/helper-validator-option@^7.22.15":
   version "7.22.15"
@@ -362,6 +416,16 @@
   version "7.21.0-placeholder-for-preset-env.2"
   resolved "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz"
   integrity sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==
+
+"@babel/plugin-proposal-private-property-in-object@^7.21.11":
+  version "7.21.11"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.11.tgz#69d597086b6760c4126525cfa154f34631ff272c"
+  integrity sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.18.6"
+    "@babel/helper-create-class-features-plugin" "^7.21.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/plugin-syntax-private-property-in-object" "^7.14.5"
 
 "@babel/plugin-syntax-async-generators@^7.8.4":
   version "7.8.4"
@@ -1145,6 +1209,15 @@
   dependencies:
     "@babel/helper-string-parser" "^7.22.5"
     "@babel/helper-validator-identifier" "^7.22.15"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.23.0":
+  version "7.23.5"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.23.5.tgz#48d730a00c95109fa4393352705954d74fb5b602"
+  integrity sha512-ON5kSOJwVO6xXVRTvOI0eOnWe7VdUcIpsovGo9U/Br4Ie4UVFQTboO2cYnDhAGU6Fp+UxSiT+pMft0SMHfuq6w==
+  dependencies:
+    "@babel/helper-string-parser" "^7.23.4"
+    "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
 "@bcoe/v8-coverage@^0.2.3":
@@ -2153,17 +2226,17 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oraichain/blsdkg@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/blsdkg/-/blsdkg-1.1.5.tgz"
-  integrity sha512-uny8Jomx3d0xzh3yxkPN1HdExErnRn/EHCsHEBN/Xx6sfJpPmGf598ZwVpVgbLDu7Wx4VhY1II5LtWCWwW8Ptg==
+"@oraichain/blsdkg@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.yarnpkg.com/@oraichain/blsdkg/-/blsdkg-1.2.17.tgz#c650d9f0bf5577f58a104efa32a80b6e6f2cc9f7"
+  integrity sha512-07BCJyB+PqFfCqwPax2fLIAjBaMcN5CqHJpnxUi0l3/Er5k7kXp5iBlzTTqTrC9/+OjNE6QxQK/Zkfb4Z/phLg==
 
-"@oraichain/common-types@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/common-types/-/common-types-1.1.5.tgz"
-  integrity sha512-ipsDnoYx91jqwhFCcAF8v9Tpyzpel353lah5MLuo6O9Wq8hw9n/cT2ZRCCfKefS2x2rs5Bi2map7iuVLPyHGZg==
+"@oraichain/common-types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/common-types/-/common-types-2.0.0.tgz#3f2b0cfc061ae33888718e17173b166d955563a1"
+  integrity sha512-opYhp8zJnvtM+rNhO/aXQiW9GNJRvCiSaoF0XI5jnTyANV5FvaktBsPEHT1+1zx14LVBNtnw0yb0yEhUMO8MNg==
   dependencies:
-    "@oraichain/customauth" "^1.1.5"
+    "@oraichain/customauth" "^2.0.0"
     "@toruslabs/eccrypto" "^1.1.8"
     bn.js "^5.2.1"
     elliptic "^6.5.4"
@@ -2171,12 +2244,12 @@
     ts-custom-error "^3.3.1"
     web3-utils "^1.8.1"
 
-"@oraichain/core@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/core/-/core-1.1.5.tgz"
-  integrity sha512-M4SfPuMjV9omAU8T3KLdTQ5HJX6ZTWNmTC5vtW64iUQ5y9q2jtGL3P7R63UdFN/JNevS4KmYyVIw5yX4xqLdKw==
+"@oraichain/core@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/core/-/core-2.0.0.tgz#1863d531256f77b7e9992ffaed17f8d6341f389f"
+  integrity sha512-Su550xlrFxiQhtcHxzNYEV0HSevrA7DY56/hHpl9Z1YHW/AOUC9TRTj30C2lwKKhD35jUC0y1e4LwHdd/Fi3AQ==
   dependencies:
-    "@oraichain/common-types" "^1.1.5"
+    "@oraichain/common-types" "^2.0.0"
     "@toruslabs/eccrypto" "^1.1.8"
     "@toruslabs/http-helpers" "^3.2.0"
     bn.js "^5.2.1"
@@ -2184,13 +2257,13 @@
     json-stable-stringify "^1.0.2"
     web3-utils "^1.8.1"
 
-"@oraichain/customauth@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/customauth/-/customauth-1.1.5.tgz"
-  integrity sha512-smZc6SKir2vM/IMN7xMe7Cal6TDMGN+YqTkkOV5d3KN1bHfomoOyYyCia5w3VosnvFcIAmkxLbhpaxyBdgIfcQ==
+"@oraichain/customauth@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/customauth/-/customauth-2.0.0.tgz#13e89d5af96b175bd4b7fbe78889565dac7014fb"
+  integrity sha512-uuoLwmHgBh/wd/vPmSO9IhhPGml0jnTFh58UKbQ0goSMJSe3m/ClCc6wQIwsNoQA45NUZ5l68h/yNQvOyDQwNQ==
   dependencies:
     "@chaitanyapotti/register-service-worker" "^1.7.3"
-    "@oraichain/torus.js" "^1.1.0"
+    "@oraichain/multifactors.js" "^2.0.0"
     "@toruslabs/broadcast-channel" "^6.2.0"
     "@toruslabs/eccrypto" "^2.0.0"
     "@toruslabs/http-helpers" "^3.3.0"
@@ -2200,100 +2273,28 @@
     jwt-decode "^3.1.2"
     lodash.merge "^4.6.2"
     loglevel "^1.8.1"
+    serialize-error "^8.1.0"
     web3-utils "^1.8.2"
 
-"@oraichain/default@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/default/-/default-1.1.5.tgz"
-  integrity sha512-RdA8ixAM+D7E3XQFwX3AnVNKSjp4PNulrvJfbxNv+mCbGFq6yowYN/kT1pJfGQNXPc0t/vrKfNKlZ3ajfTrPyA==
+"@oraichain/default@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/default/-/default-2.0.0.tgz#41d12e9137951cde2c7e3304a7c17f1233653f2f"
+  integrity sha512-4PUdSlQzopPXA5uw29TYGYdqEFsFYIH/OjrfF5yMQ+PrQ7zQOhhtTTRg/jaU4JSWWny/7cckdrvovdGR4Ssa3Q==
   dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@oraichain/core" "^1.1.5"
-    "@oraichain/security-questions" "^1.1.5"
-    "@oraichain/service-provider-base" "^1.1.5"
-    "@oraichain/service-provider-torus" "^1.1.5"
-    "@oraichain/share-serialization" "^1.1.5"
-    "@oraichain/share-transfer" "^1.1.5"
-    "@oraichain/storage-layer-torus" "^1.1.5"
+    "@oraichain/common-types" "^2.0.0"
+    "@oraichain/core" "^2.0.0"
+    "@oraichain/security-questions" "^2.0.0"
+    "@oraichain/service-provider-base" "^2.0.0"
+    "@oraichain/service-provider-orai" "^2.0.0"
+    "@oraichain/share-serialization" "^2.0.0"
+    "@oraichain/share-transfer" "^2.0.0"
+    "@oraichain/storage-layer-orai" "^2.0.0"
     bn.js "^5.2.1"
 
-"@oraichain/only-social-key@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/only-social-key/-/only-social-key-1.1.5.tgz"
-  integrity sha512-UHxR6UmsU6k7L1CYSV3pzMnMNMP9lMLKatbiUZBgxC2IyDAcJSXLC9U3Whl1GTlVvfaJezgJjUHzVs5drEv7Xw==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@toruslabs/eccrypto" "^1.1.8"
-    "@toruslabs/http-helpers" "^3.2.0"
-    bn.js "^5.2.1"
-    elliptic "^6.5.4"
-    json-stable-stringify "^1.0.2"
-    web3-utils "^1.8.1"
-
-"@oraichain/security-questions@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/security-questions/-/security-questions-1.1.5.tgz"
-  integrity sha512-0N+Ay6mQg6bgklV/7EbArzRn9EZiZpjZrtt/NqfcC0OuMRxlRumEC1EFCJS7W8o3/Hv8bf+amvWDZQeub8k96g==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    bn.js "^5.2.1"
-    web3-utils "^1.8.1"
-
-"@oraichain/service-provider-base@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/service-provider-base/-/service-provider-base-1.1.5.tgz"
-  integrity sha512-lbQBINqCRuzaklWARbsEAwAwDPFMPVlLuBzAHEVrlB0gJSHkpprwMntL7IcJWk8a3qW69fKZ6bdrATOurWXyJA==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    bn.js "^5.2.1"
-    elliptic "^6.5.4"
-
-"@oraichain/service-provider-torus@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/service-provider-torus/-/service-provider-torus-1.1.5.tgz"
-  integrity sha512-gPdAYC8BfADytMURyX1yp9uNlXceEZwc7qkgAiAdjUr/hcAqCNhXxJzy0NnLqyJlXjJ4NfpkESF/Pdmk/9+aDg==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@oraichain/customauth" "^1.1.5"
-    "@oraichain/service-provider-base" "^1.1.5"
-    bn.js "^5.2.1"
-    elliptic "^6.5.4"
-
-"@oraichain/share-serialization@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/share-serialization/-/share-serialization-1.1.5.tgz"
-  integrity sha512-pmb1KzcLTba0RHUBNFL9UtlBWIgkeoZIb312jRXFGVyXPv49t+omkjBmljAgSIruVy9HP7/8l6SbQRgOqDsNJw==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@types/create-hash" "1.2.2"
-    bn.js "^5.2.1"
-    create-hash "^1.2.0"
-
-"@oraichain/share-transfer@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/share-transfer/-/share-transfer-1.1.5.tgz"
-  integrity sha512-VuU5udhASHEGUnmT/F7vioL8XPCetKb7VS26IBMwkyNDCypyb5Sj+/H/JAoK8fEYKaEv28Ltc3c4uXoad/iyBg==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@toruslabs/eccrypto" "^1.1.8"
-    "@toruslabs/http-helpers" "^3.2.0"
-    bn.js "^5.2.1"
-
-"@oraichain/storage-layer-torus@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/storage-layer-torus/-/storage-layer-torus-1.1.5.tgz"
-  integrity sha512-2i0Lbwk4dLpCpH2LgMkdRQzrJTn1IDIPfJV52DRboOVMsG1ha6D+M70mHPwJKxURo7rse6jgaB+RDdYJLRqtsQ==
-  dependencies:
-    "@oraichain/common-types" "^1.1.5"
-    "@toruslabs/http-helpers" "^3.2.0"
-    bn.js "^5.2.1"
-    json-stable-stringify "^1.0.2"
-    web3-utils "^1.8.1"
-
-"@oraichain/torus.js@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@oraichain/torus.js/-/torus.js-1.1.0.tgz"
-  integrity sha512-f5uBgxTWSqqDrqOB+sGSjEnLfSKOVhjNJ/QvmF138Y2ChR0yl0pFWYQuM478YQmQRNk4P5UJa4uBv6QcoQ9roA==
+"@oraichain/multifactors.js@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/multifactors.js/-/multifactors.js-2.0.0.tgz#cb3851e4f795db1e3530cfb102a8aa81e78f6bb5"
+  integrity sha512-fbNq3oiGhi8VJD25JvYX6o9sTymCwkVZYp/Gv49xeLzUrcok+PQjiNwqPdkTCncc5LPECz/FF4xzw3EoBR9/1A==
   dependencies:
     "@toruslabs/eccrypto" "^2.0.0"
     "@toruslabs/http-helpers" "^3.3.0"
@@ -2304,12 +2305,86 @@
     loglevel "^1.8.1"
     web3-utils "^1.8.2"
 
-"@oraichain/web-storage@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@oraichain/web-storage/-/web-storage-1.1.5.tgz"
-  integrity sha512-Gk22cwJoERZ6sB6o7F9ufhx1THvbhE2HUuB3pakxcvt1VHffAYGXxwCCnBwue4LR+qRrR3Z5jtLBidvZaUdOfg==
+"@oraichain/only-social-key@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/only-social-key/-/only-social-key-2.0.0.tgz#3edf337f686583bfd356bde8a86a69f294669ca3"
+  integrity sha512-/bYt/VSiNwiyHDklDgceNwtitocvTeXPQBC1NGUcVPmZMkqselPPb2zw+vSMlraPNWnRVQRY2V6621WHohpzUg==
   dependencies:
-    "@oraichain/common-types" "^1.1.5"
+    "@oraichain/common-types" "^2.0.0"
+    "@toruslabs/eccrypto" "^1.1.8"
+    "@toruslabs/http-helpers" "^3.2.0"
+    bn.js "^5.2.1"
+    elliptic "^6.5.4"
+    json-stable-stringify "^1.0.2"
+    web3-utils "^1.8.1"
+
+"@oraichain/security-questions@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/security-questions/-/security-questions-2.0.0.tgz#444b5439d4350651f5d6622118c5a5f6f3354dec"
+  integrity sha512-uI4st4gMrKXOAQwVOoDeiHvXCxCnembRA+/IKUeaVLGpSwx+95zZXw6a2oCuD0DwMSsAJ07UltvY6Vv6VugcpQ==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    bn.js "^5.2.1"
+    web3-utils "^1.8.1"
+
+"@oraichain/service-provider-base@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/service-provider-base/-/service-provider-base-2.0.0.tgz#8300f583d6f8d33d7c397434443bbd547d4107f5"
+  integrity sha512-q69zwXDvL77YUsfjPeWbyYEOZFDlUekrZpjeuT9O5ZB6hcNZDqcurkZMun5xWTqec5sTisxKwCcNAHtMpeOVmg==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    bn.js "^5.2.1"
+    elliptic "^6.5.4"
+
+"@oraichain/service-provider-orai@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/service-provider-orai/-/service-provider-orai-2.0.0.tgz#cc7f200b6b6b0d8ccbb375640967c5fd714822c8"
+  integrity sha512-0zuZ+WzbjYUmf3ObIep0kCDrwcv+zCqzti3Syr6vn8bGXzMRcSqgxgpXvh1E0dvil4Bwyz/VjQaoJf8pyMwE3g==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    "@oraichain/customauth" "^2.0.0"
+    "@oraichain/service-provider-base" "^2.0.0"
+    bn.js "^5.2.1"
+    elliptic "^6.5.4"
+    web3-utils "^1.8.2"
+
+"@oraichain/share-serialization@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/share-serialization/-/share-serialization-2.0.0.tgz#93397cdff6851b718c866ce6130f65fe0cf2f7d9"
+  integrity sha512-LXnXx91KtM5WddEGiyCg5MsJaDhnkmoI4iqgKsW7ekyreHZkEgD6sed9pu+mRJLwwupg1VCvS/CzU9mjITP/Zg==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    "@types/create-hash" "1.2.2"
+    bn.js "^5.2.1"
+    create-hash "^1.2.0"
+
+"@oraichain/share-transfer@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/share-transfer/-/share-transfer-2.0.0.tgz#6e29a006c259e2abdc5ec08b296cbdffd0ab4b94"
+  integrity sha512-/Yu95gDf5vR42WVWw3gUiV2e89/e7d64DvcUWPHR+BAw5FC1D8B/fIVs1HxWBkKUC4dsOzCO9//s7nCKy60YYA==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    "@toruslabs/eccrypto" "^1.1.8"
+    "@toruslabs/http-helpers" "^3.2.0"
+    bn.js "^5.2.1"
+
+"@oraichain/storage-layer-orai@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/storage-layer-orai/-/storage-layer-orai-2.0.0.tgz#1227c322b4feff0ac3f8db3ca66317882f42d095"
+  integrity sha512-Lq5NjF2JP4JgDxxFY4GD3a2xn91DGfy746fHqMGTsajH8ZNVJHlGOt+iGoIjiZoTXcYntIYfzEp7cXYNzk78WA==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
+    "@toruslabs/http-helpers" "^3.2.0"
+    bn.js "^5.2.1"
+    json-stable-stringify "^1.0.2"
+    web3-utils "^1.8.1"
+
+"@oraichain/web-storage@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@oraichain/web-storage/-/web-storage-2.0.0.tgz#7c982fb9f4de31e0e48546792c9d5713b23313f2"
+  integrity sha512-8TkBH24jUOHgVqALS3tiDzAvPYhnYrLxUSlfsHMVkQj2AhXEhY/QbY2LV20FUttqtqJucRo6/eQY0KCQ0FuePA==
+  dependencies:
+    "@oraichain/common-types" "^2.0.0"
     "@types/bn.js" "^5.1.1"
     bn.js "^5.2.1"
 

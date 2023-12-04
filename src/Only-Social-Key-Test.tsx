@@ -3,12 +3,15 @@ import { bech32 } from "bech32";
 import elliptic from "elliptic";
 // @ts-ignore
 import crypto from "crypto-browserify";
-import { OnlySocialLoginKey as onlySocialKey } from "./tkey";
 import "./App.css";
-import { TorusServiceProvider } from "@oraichain/service-provider-torus";
+import { OraiServiceProvider } from "@oraichain/service-provider-orai";
 import init, { interpolate, get_pk } from "@oraichain/blsdkg";
 import BN from "bn.js";
 init();
+
+const onlySocialKey = window.onlySocialKey;
+
+console.log({ onlySocialKey });
 
 const ec = new elliptic.ec("secp256k1");
 
@@ -38,7 +41,7 @@ function App() {
     const init = async () => {
       // Initialization of Service Provider
       try {
-        await (onlySocialKey.serviceProvider as TorusServiceProvider).init();
+        await (onlySocialKey.serviceProvider as OraiServiceProvider).init();
       } catch (error) {
         console.error(error);
       }
@@ -53,7 +56,7 @@ function App() {
     }
     try {
       const loginResponse = await (
-        onlySocialKey.serviceProvider as TorusServiceProvider
+        onlySocialKey.serviceProvider as OraiServiceProvider
       ).triggerLogin({
         typeOfLogin: "google",
         clientId:

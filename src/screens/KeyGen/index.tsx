@@ -1,4 +1,10 @@
-import { FunctionComponent, useRef, useState, createContext, useEffect } from "react";
+import {
+  FunctionComponent,
+  useRef,
+  useState,
+  createContext,
+  useEffect,
+} from "react";
 import { generatePrivate } from "@toruslabs/eccrypto";
 import { BN } from "bn.js";
 import { ShareStore } from "@oraichain/common-types";
@@ -7,7 +13,7 @@ import Finish from "../../components/FinishGenKey";
 import KeyGen from "../../components/KeyGen";
 import KeySplit from "../../components/KeySplit";
 import Stepper from "../../components/Stepper";
-import { tKey } from "../../tkey";
+import { tKey } from "../../okey";
 
 export const KeyGenContext = createContext<{
   shares: {
@@ -19,7 +25,9 @@ export const KeyGenContext = createContext<{
   shares: {},
 });
 
-const KeyGenScreen: FunctionComponent<{ onFinish: () => void }> = ({ onFinish }) => {
+const KeyGenScreen: FunctionComponent<{ onFinish: () => void }> = ({
+  onFinish,
+}) => {
   const keyGenRef = useRef<HTMLDivElement | null>(null);
   const keySplitRef = useRef<HTMLDivElement | null>(null);
   const authFactorsRef = useRef<HTMLDivElement | null>(null);
@@ -34,12 +42,18 @@ const KeyGenScreen: FunctionComponent<{ onFinish: () => void }> = ({ onFinish })
 
   const genPrivKey = () => {
     const privKey = generatePrivate();
-    console.log("🚀 ~ file: index.tsx:26 ~ genPrivKey ~ privKey", privKey.toString("hex"));
+    console.log(
+      "🚀 ~ file: index.tsx:26 ~ genPrivKey ~ privKey",
+      privKey.toString("hex"),
+    );
     setPrivKey(privKey.toString("hex"));
   };
 
   const splitPrivKey = async () => {
-    await (tKey.serviceProvider as any).init({ skipSw: false, skipPrefetch: false });
+    await (tKey.serviceProvider as any).init({
+      skipSw: false,
+      skipPrefetch: false,
+    });
     await tKey.initialize({
       importKey: new BN(privKey, "hex"),
     });
@@ -66,9 +80,26 @@ const KeyGenScreen: FunctionComponent<{ onFinish: () => void }> = ({ onFinish })
   return (
     <KeyGenContext.Provider value={{ shares }}>
       <Stepper activeStep={activeStep} />
-      <KeyGen activeStep={activeStep} privKey={privKey} genPrivKey={genPrivKey} onNext={onKeyGenNext} ref={keyGenRef} />
-      <KeySplit activeStep={activeStep} splitPrivKey={splitPrivKey} onNext={onKeySplitNext} ref={keySplitRef} />
-      <AuthFactors activeStep={activeStep} setActiveStep={setActiveStep} mode={Mode.Generate} tKey={tKey} ref={authFactorsRef} />
+      <KeyGen
+        activeStep={activeStep}
+        privKey={privKey}
+        genPrivKey={genPrivKey}
+        onNext={onKeyGenNext}
+        ref={keyGenRef}
+      />
+      <KeySplit
+        activeStep={activeStep}
+        splitPrivKey={splitPrivKey}
+        onNext={onKeySplitNext}
+        ref={keySplitRef}
+      />
+      <AuthFactors
+        activeStep={activeStep}
+        setActiveStep={setActiveStep}
+        mode={Mode.Generate}
+        tKey={tKey}
+        ref={authFactorsRef}
+      />
       <Finish activeStep={activeStep} onFinish={onFinish} ref={finishRef} />
     </KeyGenContext.Provider>
   );

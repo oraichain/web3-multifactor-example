@@ -1,18 +1,14 @@
-# Web3 multifactor example
+import ThresholdKey from "@oraichain/default";
+import OraiStorageLayer from "@oraichain/storage-layer-orai";
+import WebStorageModule from "@oraichain/web-storage";
+import OraiServiceProvider from "@oraichain/service-provider-orai";
+import SecurityQuestionsModule from "@oraichain/security-questions";
+import init, { interpolate, get_pk } from "@oraichain/blsdkg";
+import { Network } from "@oraichain/customauth";
+import OnlySocialKey from "@oraichain/only-social-key";
+import { metadataUrl, CustomAuthArgs } from "@oraichain/customauth";
+import Multifactors from "@oraichain/multifactors.js";
 
-A example of web3-multifactor with 2 kind of key:
-
-- Only-social-key
-- ThresholdKey
-
-## Table of contents
-
-1. [Explain okey.ts](#explain-okey.ts)
-2. [How to run](#how-to-run)
-
-## Explain okey.ts
-
-```typescript
 const network: Network =
   (process.env.REACT_APP_NODE_ENV as Network) || Network.DEV;
 const hostUrl = metadataUrl[network]; // dynamic get default metadataUrl from the multifactors system
@@ -59,27 +55,6 @@ export const onlySocialKey = new OnlySocialKey({
   serviceProvider,
   storageLayer,
 });
-```
 
-<a name="how-to-run"></a>
-
-## How to run
-
-- Install yarn
-- By default of example is using only-social-key. If you want to change to thresholdKey, you must comment only-social-key-test and uncommnet the test in index.tsx.
-
-```typescript
-// import App from "./Test";
-import App from "./Only-Social-Key-Test";
-```
-
-- 2 enviroments are provided in example:
-
-  - STAGING (TESTNET)
-  - MAINET
-
-```bash
-yarn
-yarn start:staging
-
-```
+window.tKey = tKey;
+window.onlySocialKey = onlySocialKey;

@@ -1,7 +1,13 @@
-import { createContext, Dispatch, FunctionComponent, useReducer, useEffect } from "react";
+import {
+  createContext,
+  Dispatch,
+  FunctionComponent,
+  useReducer,
+  useEffect,
+} from "react";
 import { KeyDetails } from "@oraichain/common-types";
 import AuthFactors, { Mode } from "../../components/AuthFactors";
-import { tKey } from "../../tkey";
+import { tKey } from "../../okey";
 import Finish from "../../components/FinishReconstructKey";
 
 export type IState = {
@@ -18,11 +24,14 @@ export const KeyReconstructContext = createContext<{
   state: {
     numberShares: 0,
   },
-  setState: () => { },
+  setState: () => {},
 });
 
-const KeyReconstructScreen: FunctionComponent<{}> = ({ }) => {
-  const [state, setState] = useReducer((prev: IState, next: Partial<IState>) => ({ ...prev, ...next }), { numberShares: 0 });
+const KeyReconstructScreen: FunctionComponent<{}> = ({}) => {
+  const [state, setState] = useReducer(
+    (prev: IState, next: Partial<IState>) => ({ ...prev, ...next }),
+    { numberShares: 0 },
+  );
   const { privKey } = state;
 
   useEffect(() => {
